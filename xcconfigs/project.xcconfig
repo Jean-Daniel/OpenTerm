@@ -1,0 +1,3 @@
+
+#include "../hadron/xcconfigs/sdk/lion.xcconfig"
+#include "../hadron/xcconfigs/compiler/clang.xcconfig"

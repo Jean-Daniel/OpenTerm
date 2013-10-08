@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B5D4002180408510089B318 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5D4001180408510089B318 /* ScriptingBridge.framework */; };
+		1B845D80180405B800FC2DEF /* Finder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B845D7F180405B800FC2DEF /* Finder.m */; };
+		1B85B48E17C16C6900378F31 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B85B48D17C16C6900378F31 /* Cocoa.framework */; };
+		1BB36B251034C36C006EF4E4 /* OpenTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB36B241034C36C006EF4E4 /* OpenTerm.m */; };
+		1BB36B751034CA49006EF4E4 /* Terminal.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1BB36B741034CA49006EF4E4 /* Terminal.icns */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1B5D4001180408510089B318 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		1B845D7E180405B800FC2DEF /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
+		1B845D7F180405B800FC2DEF /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
+		1B85B48D17C16C6900378F31 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1BB36B241034C36C006EF4E4 /* OpenTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTerm.m; sourceTree = "<group>"; };
+		1BB36B741034CA49006EF4E4 /* Terminal.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Terminal.icns; sourceTree = "<group>"; };
+		1BDF9A29180403C2007811D7 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		1BDF9A2A180403C2007811D7 /* project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = project.xcconfig; sourceTree = "<group>"; };
+		1BDF9A2B180403C2007811D7 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		1BDF9A2D180403C2007811D7 /* application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = application.xcconfig; sourceTree = "<group>"; };
+		1BDF9A2E180403C2007811D7 /* archive.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = archive.xcconfig; sourceTree = "<group>"; };
+		1BDF9A2F180403C2007811D7 /* bundle.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = bundle.xcconfig; sourceTree = "<group>"; };
+		1BDF9A30180403C2007811D7 /* dylib.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = dylib.xcconfig; sourceTree = "<group>"; };
+		1BDF9A31180403C2007811D7 /* executable.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = executable.xcconfig; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* OpenTerm.service */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenTerm.service; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B85B48E17C16C6900378F31 /* Cocoa.framework in Frameworks */,
+				1B5D4002180408510089B318 /* ScriptingBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* OpenTerm.service */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BDF9A28180403C2007811D7 /* xcconfigs */ = {
+			isa = PBXGroup;
+			children = (
+				1BDF9A29180403C2007811D7 /* debug.xcconfig */,
+				1BDF9A2A180403C2007811D7 /* project.xcconfig */,
+				1BDF9A2B180403C2007811D7 /* release.xcconfig */,
+				1BDF9A2C180403C2007811D7 /* target */,
+			);
+			name = xcconfigs;
+			path = ../xcconfigs;
+			sourceTree = "<group>";
+		};
+		1BDF9A2C180403C2007811D7 /* target */ = {
+			isa = PBXGroup;
+			children = (
+				1BDF9A2D180403C2007811D7 /* application.xcconfig */,
+				1BDF9A2E180403C2007811D7 /* archive.xcconfig */,
+				1BDF9A2F180403C2007811D7 /* bundle.xcconfig */,
+				1BDF9A30180403C2007811D7 /* dylib.xcconfig */,
+				1BDF9A31180403C2007811D7 /* executable.xcconfig */,
+			);
+			path = target;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* OpenTerm */ = {
+			isa = PBXGroup;
+			children = (
+				1B845D7E180405B800FC2DEF /* Finder.h */,
+				1B845D7F180405B800FC2DEF /* Finder.m */,
+				1BB36B241034C36C006EF4E4 /* OpenTerm.m */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				1BDF9A28180403C2007811D7 /* xcconfigs */,
+			);
+			name = OpenTerm;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1BB36B741034CA49006EF4E4 /* Terminal.icns */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B5D4001180408510089B318 /* ScriptingBridge.framework */,
+				1B85B48D17C16C6900378F31 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* OpenTerm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "OpenTerm" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenTerm;
+			productInstallPath = "$(HOME)/Applications";
+			productName = OpenTerm;
+			productReference = 8D1107320486CEB800E47090 /* OpenTerm.service */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpenTerm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				fr,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* OpenTerm */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* OpenTerm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1BB36B751034CA49006EF4E4 /* Terminal.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB36B251034C36C006EF4E4 /* OpenTerm.m in Sources */,
+				1B845D80180405B800FC2DEF /* Finder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDF9A2F180403C2007811D7 /* bundle.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Services";
+				PRODUCT_NAME = OpenTerm;
+				WRAPPER_EXTENSION = service;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDF9A2F180403C2007811D7 /* bundle.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Services";
+				PRODUCT_NAME = OpenTerm;
+				WRAPPER_EXTENSION = service;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDF9A29180403C2007811D7 /* debug.xcconfig */;
+			buildSettings = {
+				HA_TARGET_LDFLAGS = "";
+				WONDERBOX = "";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDF9A2B180403C2007811D7 /* release.xcconfig */;
+			buildSettings = {
+				HA_TARGET_LDFLAGS = "";
+				WONDERBOX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "OpenTerm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpenTerm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

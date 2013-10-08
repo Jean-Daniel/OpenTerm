@@ -1,0 +1,3 @@
+[submodule "hadron"]
+	path = hadron
+	url = git@github.com:Jean-Daniel/hadron
