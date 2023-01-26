@@ -18,6 +18,7 @@
 /* Begin PBXFileReference section */
 		1B5D4001180408510089B318 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		1B6623062982D76C006B301A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1B67A3082982E1CF0019EB67 /* OpenTerm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenTerm.entitlements; sourceTree = "<group>"; };
 		1B845D7E180405B800FC2DEF /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		1B845D7F180405B800FC2DEF /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
 		1B85B48D17C16C6900378F31 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -83,6 +84,7 @@
 		29B97314FDCFA39411CA2CEA /* OpenTerm */ = {
 			isa = PBXGroup;
 			children = (
+				1B67A3082982E1CF0019EB67 /* OpenTerm.entitlements */,
 				1B845D7E180405B800FC2DEF /* Finder.h */,
 				1B845D7F180405B800FC2DEF /* Finder.m */,
 				1BB36B241034C36C006EF4E4 /* OpenTerm.m */,
@@ -207,8 +209,10 @@
 			baseConfigurationReference = 1BDF9A2F180403C2007811D7 /* bundle.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = OpenTerm.entitlements;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Open Terminal Here";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -224,8 +228,10 @@
 			baseConfigurationReference = 1BDF9A2F180403C2007811D7 /* bundle.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = OpenTerm.entitlements;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Open Terminal Here";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
