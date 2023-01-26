@@ -18,9 +18,9 @@
 int main (int argc, const char * argv[]) {
   @autoreleasepool {
     OpenTerm *term = [[OpenTerm alloc] init];
-    NSRegisterServicesProvider(term, @"org.shadowlab.open-term");
+    NSRegisterServicesProvider(term, @"com.xenonium.open-term");
     // Quit after 3 seconds of inactivity (avoid zombies)
-    [NSTimer scheduledTimerWithTimeInterval:3 target:term selector:@selector(terminate:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:5 target:term selector:@selector(terminate:) userInfo:nil repeats:NO];
     [[NSRunLoop currentRunLoop] run];
   }
   return 0;
@@ -28,20 +28,7 @@ int main (int argc, const char * argv[]) {
 
 @implementation OpenTerm
 
-static CFStringRef const kTerminalBundleIdentifier = CFSTR("com.apple.Terminal");
-
-static
-void OpenTerminalInFolder(NSURL *url) {
-  CFURLRef term = NULL;
-  if (noErr == LSFindApplicationForInfo(kLSUnknownCreator, kTerminalBundleIdentifier, NULL, NULL, &term)) {
-    NSArray *urls = @[url];
-    
-    LSLaunchURLSpec spec = {};
-    spec.appURL = term;
-    spec.itemURLs = SPXNSToCFArray(urls);
-    LSOpenFromURLSpec(&spec, NULL);
-  }
-}
+static NSString * const kTerminalBundleIdentifier = @"com.apple.Terminal";
 
 - (void)terminate:(NSTimer *)aTimer {
   NSUnregisterServicesProvider(@"org.shadowlab.open-term");
@@ -50,21 +37,34 @@ void OpenTerminalInFolder(NSURL *url) {
   exit(0);
 }
 
-- (BOOL)openTerm:(NSArray *)urls {
-  if ([urls count] > 1) {
+- (void)openTerminalInFolder:(NSURL *)url {
+  NSURL *term = [NSWorkspace.sharedWorkspace URLForApplicationWithBundleIdentifier:kTerminalBundleIdentifier];
+  if (term) {
+    [NSWorkspace.sharedWorkspace openURLs:@[url]
+                     withApplicationAtURL:term
+                            configuration:NSWorkspaceOpenConfiguration.configuration
+                        completionHandler:^(NSRunningApplication *app, NSError *error) {
+      [self terminate:nil];
+    }];
+  } else {
+    [self terminate:nil];
+  }
+}
+- (BOOL)openTerm:(NSArray<NSURL *> *)urls {
+  if (urls.count > 1) {
     // More than one item, open parent of .
-    OpenTerminalInFolder([[urls objectAtIndex:0] URLByDeletingLastPathComponent]);
+    [self openTerminalInFolder:[urls[0] URLByDeletingLastPathComponent]];
     return YES;
-  } else if ([urls count] > 0) {
+  } else if (urls.count > 0) {
     BOOL isDir = NO;
-    NSString *path = [[urls objectAtIndex:0] path];
+    NSString *path = urls[0].path;
     if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir]) {
       if (isDir) {
-        OpenTerminalInFolder([urls objectAtIndex:0]);
+        [self openTerminalInFolder:urls[0]];
         return YES;
       } else {
         // open parent of [urls objectAtIndex:0]
-        OpenTerminalInFolder([[urls objectAtIndex:0] URLByDeletingLastPathComponent]);
+        [self openTerminalInFolder: [urls[0] URLByDeletingLastPathComponent]];
         return YES;
       }
     }
@@ -83,8 +83,8 @@ void OpenTerminalInFolder(NSURL *url) {
     url = [NSURL URLWithString:here];
 #else
   SBElementArray *windows = finder.windows;
-  if ([windows count] > 0) {
-    id item = [[windows objectAtIndex:0] get];
+  if (windows.count > 0) {
+    id item = [windows[0] get];
     if ([item respondsToSelector:@selector(target)]) {
       FinderItem *target = [[item target] get];
       if ([target respondsToSelector:@selector(URL)]) {
@@ -110,23 +110,21 @@ void OpenTerminalInFolder(NSURL *url) {
   if ([pboard canReadObjectForClasses:classes options:opts]) {
     // contains URLS
     NSArray *urls = [pboard readObjectsForClasses:classes options:opts];
-    if ([self openTerm:urls])
-      [self terminate:nil];
+    [self openTerm:urls];
+    return;
   }
   
-  NSString *type = [pboard availableTypeFromArray:[NSArray arrayWithObject:NSFilenamesPboardType]];
+  NSString *type = [pboard availableTypeFromArray:[NSArray arrayWithObject:NSPasteboardTypeFileURL]];
   if (type) {
-    NSArray *filenames = [pboard propertyListForType:type];
+    NSArray *fileurls = [pboard propertyListForType:type];
     // do the same.
     NSMutableArray *urls = [NSMutableArray array];
-    for (NSString *file in filenames) {
-      [urls addObject:[NSURL fileURLWithPath:file]];
+    for (NSString *file in fileurls) {
+      [urls addObject:[NSURL URLWithString:file]];
     }
 
-    if ([self openTerm:urls])
-      [self terminate:nil];
+    [self openTerm:urls];
   }
-  [self terminate:nil];
 }
 
 @end

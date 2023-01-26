@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3313A334-331B-4258-A56D-2975DB556F13</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OpenTerm</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AC11050B-AA1F-4447-A7D2-43F860D17C0C</key>
+		<string>ssh://github.com/Jean-Daniel/hadron</string>
+		<key>B850EACD-8180-4375-9600-ED39D53D39F0</key>
+		<string>ssh://github.com/Jean-Daniel/OpenTerm</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OpenTerm.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AC11050B-AA1F-4447-A7D2-43F860D17C0C</key>
+		<string>../hadron</string>
+		<key>B850EACD-8180-4375-9600-ED39D53D39F0</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/Jean-Daniel/OpenTerm</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B850EACD-8180-4375-9600-ED39D53D39F0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AC11050B-AA1F-4447-A7D2-43F860D17C0C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hadron</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B850EACD-8180-4375-9600-ED39D53D39F0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OpenTerm</string>
+		</dict>
+	</array>
+</dict>
+</plist>

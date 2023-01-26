@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B5D4001180408510089B318 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		1B6623062982D76C006B301A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B845D7E180405B800FC2DEF /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		1B845D7F180405B800FC2DEF /* Finder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Finder.m; sourceTree = "<group>"; };
 		1B85B48D17C16C6900378F31 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -140,19 +140,22 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						DevelopmentTeam = 3DT6DNJE39;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpenTerm" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
 				en,
 				fr,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* OpenTerm */;
 			projectDirPath = "";
@@ -191,7 +194,7 @@
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
+				1B6623062982D76C006B301A /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -207,7 +210,10 @@
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Open Terminal Here";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INSTALL_PATH = "$(HOME)/Library/Services";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xenonium.OpenTerm;
 				PRODUCT_NAME = OpenTerm;
 				WRAPPER_EXTENSION = service;
 			};
@@ -221,7 +227,10 @@
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /;
 				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Open Terminal Here";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INSTALL_PATH = "$(HOME)/Library/Services";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xenonium.OpenTerm;
 				PRODUCT_NAME = OpenTerm;
 				WRAPPER_EXTENSION = service;
 			};

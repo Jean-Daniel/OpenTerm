@@ -1,3 +1,14 @@
 
-#include "../hadron/xcconfigs/os/lion.xcconfig"
-#include "../hadron/xcconfigs/compiler/clang.xcconfig"
+#include "../hadron/xcconfigs/os/ventura.xcconfig"
+
+DEVELOPMENT_TEAM = 3DT6DNJE39
+
+//:configuration = Debug
+MARKETING_VERSION = 1.0.0
+CURRENT_PROJECT_VERSION = 01000000
+
+// automatic code sign
+CODE_SIGN_STYLE = Automatic
+PROVISIONING_PROFILE_SPECIFIER =
+
+LOCALIZED_STRING_MACRO_NAMES = LocalizedString NSLocalizedString CFBundleCopyLocalizedString
